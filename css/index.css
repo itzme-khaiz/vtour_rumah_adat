@@ -20,6 +20,109 @@ body {
     background: var(--bg);
 }
 
+/* Theme controller styles (disabled; keep for future use)
+.theme-menu {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 5;
+}
+
+.theme-menu__toggle {
+    border: 1px solid rgba(34, 211, 238, 0.4);
+    background: rgba(11, 16, 32, 0.9);
+    color: var(--accent);
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.theme-menu__toggle:hover,
+.theme-menu__toggle:focus-visible {
+    background: rgba(34, 211, 238, 0.12);
+    transform: translateY(-1px);
+}
+
+.theme-menu__panel {
+    width: clamp(220px, 28vw, 260px);
+    background: rgba(11, 16, 32, 0.96);
+    border: 1px solid #1f2a44;
+    border-radius: 16px;
+    padding: 16px;
+    display: grid;
+    gap: 14px;
+    backdrop-filter: blur(8px);
+}
+
+.theme-menu__panel fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.theme-menu__panel legend {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(230, 237, 243, 0.7);
+    margin-bottom: 2px;
+}
+
+.theme-menu__panel label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--ink);
+}
+
+.theme-menu__panel input[type="color"] {
+    appearance: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    width: 48px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.theme-menu__panel input[type="color"]::-webkit-color-swatch,
+.theme-menu__panel input[type="color"]::-moz-color-swatch {
+    border: none;
+    border-radius: 8px;
+}
+
+.theme-menu__reset {
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    background: transparent;
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    justify-self: end;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.theme-menu__reset:hover,
+.theme-menu__reset:focus-visible {
+    background: rgba(34, 211, 238, 0.12);
+    transform: translateY(-1px);
+}
+*/
+
 /* Header: bagian atas berisi gambar dan judul, dengan tinggi minimal 72vh */
 header {
     position: relative;
@@ -72,14 +175,17 @@ header::after {
 /* Kontainer tombol CTA (Call To Action) */
 .cta {
     margin-top: 20px;
-    display: inline-grid;
+    display: flex;
+    flex-wrap: wrap;
     gap: 12px;
-    justify-items: start;
 }
 
 /* Tombol CTA: masuk ke tur virtual */
 .cta a {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 200px;
     background: var(--accent);
     color: #001018;
     text-decoration: none;
@@ -95,16 +201,10 @@ header::after {
     transform: translateY(-2px);
 }
 
-/* Tautan sekunder menuju artikel referensi */
-.cta a.secondary {
-    background: transparent;
-    color: var(--ink);
-    border: 1px solid rgba(34, 211, 238, 0.5);
-    box-shadow: none;
-}
-
-.cta a.secondary:hover {
-    background: rgba(34, 211, 238, 0.12);
+@media (max-width: 520px) {
+    .cta a {
+        flex: 1 1 100%;
+    }
 }
 
 /* Main: konten utama di bawah header */

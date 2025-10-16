@@ -6,8 +6,6 @@ Tur virtual 360 derajat untuk mengenalkan Rumah Adat Baruga sebagai balai adat k
 
 - Landing page tematik (`index.html`) dengan deskripsi arsitektur Baruga dan tombol ajakan (CTA) menuju tur.
 - Tur utama (`baruga.html`) berbasis Pannellum dengan 54 titik (0-53), tombol minimap, toggle drag, dan overlay koordinat yaw/pitch.
-- Tur lanjutan (`baruga_adv.html`) menambahkan navigasi grid, highlight scene aktif, kontrol prev/next, shortcut keyboard, serta hotspot otomatis antar scene.
-- Panel admin (`admin.html`) untuk CRUD data scene, pratinjau gambar, impor/ekspor JSON, dan generator `tour.html`. Data disimpan di localStorage.
 - Struktur aset terorganisir: folder `panos/` untuk panorama, `images/` untuk hero dan minimap, serta stylesheet terpisah.
 
 ## Struktur Proyek
