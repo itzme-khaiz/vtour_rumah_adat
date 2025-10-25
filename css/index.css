@@ -172,43 +172,75 @@ header::after {
     max-width: 860px;
 }
 
-/* Kontainer tombol CTA (Call To Action) */
-.cta {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+/* CTA row container below hero */
+.cta-section {
+    background: #0c1429;
+    border-top: 1px solid #0f1f3a;
+    border-bottom: 1px solid #0f1f3a;
+    padding: 52px 0 64px;
 }
 
-/* Tombol CTA: masuk ke tur virtual */
-.cta a {
+.cta-container {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-card {
+    background: linear-gradient(145deg, rgba(28,52,92,0.95), rgba(12,26,56,0.95));
+    border: 1px solid rgba(34,211,238,0.25);
+    border-radius: 28px;
+    padding: 30px 28px 34px;
+    flex: 1 1 240px;
+    max-width: 280px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    box-shadow: 0 18px 45px rgba(6,20,43,0.55);
+}
+
+.cta-icon {
+    font-size: 40px;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.35));
+}
+
+.cta-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--ink);
+}
+
+.cta-card p {
+    margin: 0;
+    color: rgba(230, 237, 243, 0.72);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.cta-button {
+    margin-top: auto;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    flex: 0 1 220px;
-    min-width: 180px;
-    max-width: 280px;
+    padding: 10px 22px;
+    border-radius: 999px;
     background: var(--accent);
-    color: #001018;
+    color: #00101a;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 800;
-    padding: 14px 22px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(34,211,238,.25);
-    transition: transform 0.2s;
+    box-shadow: 0 6px 20px rgba(34,211,238,0.25);
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Efek hover pada tombol CTA */
-.cta a:hover {
+.cta-button:hover {
     transform: translateY(-2px);
-}
-
-@media (max-width: 520px) {
-    .cta a {
-        flex: 1 1 100%;
-        max-width: 100%;
-    }
+    box-shadow: 0 10px 28px rgba(34,211,238,0.35);
 }
 
 /* Main: konten utama di bawah header */

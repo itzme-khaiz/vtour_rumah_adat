@@ -85,6 +85,16 @@
 
 <script>
 
+  // function renderAlertHotspot(hotSpotDiv, args) {
+  //   hotSpotDiv.classList.add('custom-hotspot');
+
+  //   if (args) {
+  //     const tooltip = document.createElement('span');
+  //     tooltip.textContent = args;
+  //     hotSpotDiv.appendChild(tooltip);
+  //   }
+  // }
+
   /*
     // === Generator otomatis hotspot ===
     // const LAST_SCENE_INDEX = 53;
@@ -125,7 +135,34 @@
       "showControls": true
     },
     "scenes": {
-      "s0":  { "title": "Spot 0",  "type": "equirectangular", "panorama": "panos/image0.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s1",  "text": "Ke Spot 1" }] },
+      "s0":  { "title": "Spot 0",  "type": "equirectangular", "panorama": "panos/image0.jpg",  "hotSpots": [
+        { "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s1",  "text": "Ke Spot 1" },
+        {
+            "pitch": 24,
+            "yaw": 0.75,
+            "type": "info",
+            "text": "Timpalaja-Ada satu keunikan lain dalam struktur bola ugi di antara dinding dan atap. Terdapat bidang segitiga atau gevel (gable) yang disebut timpalaja. Dengan bagian timpalaja yang dipasang bersusun ini bisa diketahui status sosial pemilik rumah. Jika timpalaja memiliki tiga atau lima susun, maka tandanya pemilik rumah berasal dari golongan elite. Namun jika timpalaja hanya terdiri dari satu atau dua susun, berarti pemilik rumah berasal dari kalangan biasa. Meski demikian, penggunaan timpalaja untuk menunjukkan status sosial pada masa kini sudah tidak seketat pada zaman dahulu dan jumlah susunannya sudah tidak lagi harus selalu sesuai dengan status sosial. Masyarakat dari segala kalangan dapat memasang timpalaja dengan susunan yang sesuai keinginan.<br><br><em>Sumber:</em> <a href=\"https://id.wikipedia.org/wiki/Bola_Ugi#cite_note-5\" target=\"_blank\" rel=\"noopener noreferrer\">Wikipedia - Bola Ugi</a>",
+            "URL": "https://id.wikipedia.org/wiki/Bola_Ugi#cite_note-5"
+        },
+        {
+            "pitch": 7,
+            "yaw": 52,
+            "type": "info",
+            "text": "Papan nama"
+        },
+        {
+            "pitch": -1.16,
+            "yaw": -35.75,
+            "type": "info",
+            "text": "Lampu"
+        },
+        {
+            "pitch": 1,
+            "yaw": 38,
+            "type": "info",
+            "text": "Bunga"
+        },
+      ] },
       "s1":  { "title": "Spot 1",  "type": "equirectangular", "panorama": "panos/image1.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s2",  "text": "Ke Spot 2" }] },
       "s2":  { "title": "Spot 2",  "type": "equirectangular", "panorama": "panos/image2.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s3",  "text": "Ke Spot 3" }] },
       "s3":  { "title": "Spot 3",  "type": "equirectangular", "panorama": "panos/image3.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s4",  "text": "Ke Spot 4" }] },
@@ -191,22 +228,15 @@
   }
 
   // === Menampilkan koordinat pitch dan yaw saat panorama di-klik ===
-  const coordDiv = document.createElement('div');
-  coordDiv.style.position = 'fixed';
-  coordDiv.style.bottom = '24px';
-  coordDiv.style.right = '24px';
-  coordDiv.style.background = '#111831cc';
-  coordDiv.style.color = '#22d3ee';
-  coordDiv.style.padding = '10px 18px';
-  coordDiv.style.borderRadius = '10px';
-  coordDiv.style.fontWeight = 'bold';
-  coordDiv.style.zIndex = '2000';
-  coordDiv.style.fontFamily = 'monospace';
-  coordDiv.style.pointerEvents = 'none';
-  coordDiv.textContent = 'Klik panorama untuk koordinat';
-  document.body.appendChild(coordDiv);
-
   const panoramaEl = document.getElementById('panorama');
+  const coordDiv = document.createElement('div');
+  coordDiv.className = 'coord-hint';
+  coordDiv.textContent = 'Klik panorama untuk koordinat';
+  if (panoramaEl) {
+    panoramaEl.appendChild(coordDiv);
+  } else {
+    document.body.appendChild(coordDiv);
+  }
   const toggleBtn = document.getElementById('toggleDragBtn');
   const viewerContainer = typeof viewer.getContainer === 'function'
     ? viewer.getContainer()
@@ -290,6 +320,10 @@
 
   // Set cursor awal dan pesan bawaan
   enableDrag();
+
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.hotspot-alert.is-open').forEach((node) => node.classList.remove('is-open'));
+  });
 </script>
 
 </body>
