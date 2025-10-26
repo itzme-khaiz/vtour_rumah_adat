@@ -245,17 +245,19 @@ header::after {
 
 /* Main: konten utama di bawah header */
 main {
-    max-width: 1100px;
+    max-width: min(1400px, 120%);
     margin: 36px auto;
     padding: 0 20px;
 }
 
 /* Card: panel/kartu untuk penjelasan tentang Baruga */
 .card {
+    width: min(1180px, 120%);
+    margin: 0 auto;
     background: var(--panel);
     border: 1px solid #1f2a44;
     border-radius: 16px;
-    padding: 22px;
+    padding: 28px;
 }
 
 /* Judul section di dalam card */
