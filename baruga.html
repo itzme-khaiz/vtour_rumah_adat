@@ -1,87 +1,88 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pannellum Tour 0–53 (no loops)</title>
+    <title>Tur Virtual Rumah Adat Baruga</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <link rel="stylesheet" href="css/baruga.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
-
 </head>
+
 <body>
-<div class="top-bar">
-  <a href="index.html" class="go-home">← Kembali ke Beranda</a>
-  <h3 class="page-title">Pannellum Virtual Tour (Scenes 0 → 53)</h3>
-  <div class="top-bar__actions">
-    <button class="minimap-btn" onclick="showMinimap()">Tampilkan Minimap</button>
-    <button id="toggleDragBtn" class="minimap-btn">Nonaktifkan Drag</button>
+  <div class="top-bar">
+    <a href="index.html" class="go-home">← Kembali ke Beranda</a>
+    <h3 class="page-title">Tur Virtual Rumah Adat Baruga</h3>
+    <div class="top-bar__actions">
+      <button class="minimap-btn" onclick="showMinimap()">Tampilkan Minimap</button>
+      <button id="toggleDragBtn" class="minimap-btn">Nonaktifkan Drag</button>
+    </div>
   </div>
-</div>
 
-<!-- Modal Minimap -->
-<div id="minimapModal" class="minimap-modal" onclick="hideMinimap()">
-  <img src="images/minimap.jpg" alt="Minimap Virtual Tour" class="minimap-img">
-</div>
+  <!-- Modal Minimap -->
+  <div id="minimapModal" class="minimap-modal" onclick="hideMinimap()">
+    <img src="images/minimap.jpg" alt="Minimap Virtual Tour" class="minimap-img">
+  </div>
 
-<div id="panorama"></div>
-<div class="scenes">
-  <!-- Static scene buttons without any loop -->
-  <button onclick="viewer.loadScene('s0')">0</button>
-  <button onclick="viewer.loadScene('s1')">1</button>
-  <button onclick="viewer.loadScene('s2')">2</button>
-  <button onclick="viewer.loadScene('s3')">3</button>
-  <button onclick="viewer.loadScene('s4')">4</button>
-  <button onclick="viewer.loadScene('s5')">5</button>
-  <button onclick="viewer.loadScene('s6')">6</button>
-  <button onclick="viewer.loadScene('s7')">7</button>
-  <button onclick="viewer.loadScene('s8')">8</button>
-  <button onclick="viewer.loadScene('s9')">9</button>
-  <button onclick="viewer.loadScene('s10')">10</button>
-  <button onclick="viewer.loadScene('s11')">11</button>
-  <button onclick="viewer.loadScene('s12')">12</button>
-  <button onclick="viewer.loadScene('s13')">13</button>
-  <button onclick="viewer.loadScene('s14')">14</button>
-  <button onclick="viewer.loadScene('s15')">15</button>
-  <button onclick="viewer.loadScene('s16')">16</button>
-  <button onclick="viewer.loadScene('s17')">17</button>
-  <button onclick="viewer.loadScene('s18')">18</button>
-  <button onclick="viewer.loadScene('s19')">19</button>
-  <button onclick="viewer.loadScene('s20')">20</button>
-  <button onclick="viewer.loadScene('s21')">21</button>
-  <button onclick="viewer.loadScene('s22')">22</button>
-  <button onclick="viewer.loadScene('s23')">23</button>
-  <button onclick="viewer.loadScene('s24')">24</button>
-  <button onclick="viewer.loadScene('s25')">25</button>
-  <button onclick="viewer.loadScene('s26')">26</button>
-  <button onclick="viewer.loadScene('s27')">27</button>
-  <button onclick="viewer.loadScene('s28')">28</button>
-  <button onclick="viewer.loadScene('s29')">29</button>
-  <button onclick="viewer.loadScene('s30')">30</button>
-  <button onclick="viewer.loadScene('s31')">31</button>
-  <button onclick="viewer.loadScene('s32')">32</button>
-  <button onclick="viewer.loadScene('s33')">33</button>
-  <button onclick="viewer.loadScene('s34')">34</button>
-  <button onclick="viewer.loadScene('s35')">35</button>
-  <button onclick="viewer.loadScene('s36')">36</button>
-  <button onclick="viewer.loadScene('s37')">37</button>
-  <button onclick="viewer.loadScene('s38')">38</button>
-  <button onclick="viewer.loadScene('s39')">39</button>
-  <button onclick="viewer.loadScene('s40')">40</button>
-  <button onclick="viewer.loadScene('s41')">41</button>
-  <button onclick="viewer.loadScene('s42')">42</button>
-  <button onclick="viewer.loadScene('s43')">43</button>
-  <button onclick="viewer.loadScene('s44')">44</button>
-  <button onclick="viewer.loadScene('s45')">45</button>
-  <button onclick="viewer.loadScene('s46')">46</button>
-  <button onclick="viewer.loadScene('s47')">47</button>
-  <button onclick="viewer.loadScene('s48')">48</button>
-  <button onclick="viewer.loadScene('s49')">49</button>
-  <button onclick="viewer.loadScene('s50')">50</button>
-  <button onclick="viewer.loadScene('s51')">51</button>
-  <button onclick="viewer.loadScene('s52')">52</button>
-  <button onclick="viewer.loadScene('s53')">53</button>
-</div>
+  <div id="panorama"></div>
+  <div class="scenes">
+    <!-- Static scene buttons without any loop -->
+    <button onclick="viewer.loadScene('s0')">0</button>
+    <button onclick="viewer.loadScene('s1')">1</button>
+    <button onclick="viewer.loadScene('s2')">2</button>
+    <button onclick="viewer.loadScene('s3')">3</button>
+    <button onclick="viewer.loadScene('s4')">4</button>
+    <button onclick="viewer.loadScene('s5')">5</button>
+    <button onclick="viewer.loadScene('s6')">6</button>
+    <button onclick="viewer.loadScene('s7')">7</button>
+    <button onclick="viewer.loadScene('s8')">8</button>
+    <button onclick="viewer.loadScene('s9')">9</button>
+    <button onclick="viewer.loadScene('s10')">10</button>
+    <button onclick="viewer.loadScene('s11')">11</button>
+    <button onclick="viewer.loadScene('s12')">12</button>
+    <button onclick="viewer.loadScene('s13')">13</button>
+    <button onclick="viewer.loadScene('s14')">14</button>
+    <button onclick="viewer.loadScene('s15')">15</button>
+    <button onclick="viewer.loadScene('s16')">16</button>
+    <button onclick="viewer.loadScene('s17')">17</button>
+    <button onclick="viewer.loadScene('s18')">18</button>
+    <button onclick="viewer.loadScene('s19')">19</button>
+    <button onclick="viewer.loadScene('s20')">20</button>
+    <button onclick="viewer.loadScene('s21')">21</button>
+    <button onclick="viewer.loadScene('s22')">22</button>
+    <button onclick="viewer.loadScene('s23')">23</button>
+    <button onclick="viewer.loadScene('s24')">24</button>
+    <button onclick="viewer.loadScene('s25')">25</button>
+    <button onclick="viewer.loadScene('s26')">26</button>
+    <button onclick="viewer.loadScene('s27')">27</button>
+    <button onclick="viewer.loadScene('s28')">28</button>
+    <button onclick="viewer.loadScene('s29')">29</button>
+    <button onclick="viewer.loadScene('s30')">30</button>
+    <button onclick="viewer.loadScene('s31')">31</button>
+    <button onclick="viewer.loadScene('s32')">32</button>
+    <button onclick="viewer.loadScene('s33')">33</button>
+    <button onclick="viewer.loadScene('s34')">34</button>
+    <button onclick="viewer.loadScene('s35')">35</button>
+    <button onclick="viewer.loadScene('s36')">36</button>
+    <button onclick="viewer.loadScene('s37')">37</button>
+    <button onclick="viewer.loadScene('s38')">38</button>
+    <button onclick="viewer.loadScene('s39')">39</button>
+    <button onclick="viewer.loadScene('s40')">40</button>
+    <button onclick="viewer.loadScene('s41')">41</button>
+    <button onclick="viewer.loadScene('s42')">42</button>
+    <button onclick="viewer.loadScene('s43')">43</button>
+    <button onclick="viewer.loadScene('s44')">44</button>
+    <button onclick="viewer.loadScene('s45')">45</button>
+    <button onclick="viewer.loadScene('s46')">46</button>
+    <button onclick="viewer.loadScene('s47')">47</button>
+    <button onclick="viewer.loadScene('s48')">48</button>
+    <button onclick="viewer.loadScene('s49')">49</button>
+    <button onclick="viewer.loadScene('s50')">50</button>
+    <button onclick="viewer.loadScene('s51')">51</button>
+    <button onclick="viewer.loadScene('s52')">52</button>
+    <button onclick="viewer.loadScene('s53')">53</button>
+  </div>
 
 <script>
 
@@ -135,36 +136,85 @@
       "showControls": true
     },
     "scenes": {
-      "s0":  { "title": "Spot 0",  "type": "equirectangular", "panorama": "panos/image0.jpg",  "hotSpots": [
-        { "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s1",  "text": "Ke Spot 1" },
-        {
+      "s0":  { 
+        "title": "Halaman Utama",  
+        "type": "equirectangular", 
+        "panorama": "panos/image0.jpg",  
+        "hotSpots": [
+          { 
+            "pitch": 0,
+            "yaw": 0, 
+            "type": "scene", 
+            "sceneId": "s1",  
+            "text": "Ke Tangga" 
+          },
+          {
             "pitch": 24,
             "yaw": 0.75,
             "type": "info",
-            "text": "Timpalaja-Ada satu keunikan lain dalam struktur bola ugi di antara dinding dan atap. Terdapat bidang segitiga atau gevel (gable) yang disebut timpalaja. Dengan bagian timpalaja yang dipasang bersusun ini bisa diketahui status sosial pemilik rumah. Jika timpalaja memiliki tiga atau lima susun, maka tandanya pemilik rumah berasal dari golongan elite. Namun jika timpalaja hanya terdiri dari satu atau dua susun, berarti pemilik rumah berasal dari kalangan biasa. Meski demikian, penggunaan timpalaja untuk menunjukkan status sosial pada masa kini sudah tidak seketat pada zaman dahulu dan jumlah susunannya sudah tidak lagi harus selalu sesuai dengan status sosial. Masyarakat dari segala kalangan dapat memasang timpalaja dengan susunan yang sesuai keinginan.<br><br><em>Sumber:</em> <a href=\"https://id.wikipedia.org/wiki/Bola_Ugi#cite_note-5\" target=\"_blank\" rel=\"noopener noreferrer\">Wikipedia - Bola Ugi</a>",
+            "text": "Timpalaja-Ada satu keunikan lain dalam struktur bola ugi di antara dinding dan atap. Terdapat bidang segitiga atau gevel (gable) yang disebut timpalaja. Dengan bagian timpalaja yang dipasang bersusun ini bisa diketahui status sosial pemilik rumah. Jika timpalaja memiliki tiga atau lima susun, maka tandanya pemilik rumah berasal dari golongan elite.<br><br><em>Sumber:</em> <a href=\"https://id.wikipedia.org/wiki/Bola_Ugi#cite_note-5\" target=\"_blank\" rel=\"noopener noreferrer\">Wikipedia - Bola Ugi</a>",
             "URL": "https://id.wikipedia.org/wiki/Bola_Ugi#cite_note-5"
-        },
-        {
+          },
+          {
             "pitch": 7,
             "yaw": 52,
             "type": "info",
             "text": "Papan nama"
-        },
-        {
+          },
+          {
             "pitch": -1.16,
             "yaw": -35.75,
             "type": "info",
             "text": "Lampu"
-        },
-        {
+          },
+          {
             "pitch": 1,
             "yaw": 38,
             "type": "info",
             "text": "Bunga"
-        },
+          },
       ] },
-      "s1":  { "title": "Spot 1",  "type": "equirectangular", "panorama": "panos/image1.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s2",  "text": "Ke Spot 2" }] },
-      "s2":  { "title": "Spot 2",  "type": "equirectangular", "panorama": "panos/image2.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s3",  "text": "Ke Spot 3" }] },
+      "s1":  { 
+        "title": "Tangga Masuk",  
+        "type": "equirectangular", 
+        "panorama": "panos/image1.jpg",  
+        "hotSpots": [
+          { "pitch": 0, 
+            "yaw": 0, 
+            "type": "scene", 
+            "sceneId": "s2",  
+            "text": "Ke Pagar" 
+          }]
+      },
+      "s2":  { 
+        "title": "Pagar",  
+        "type": "equirectangular", 
+        "panorama": "panos/image2.jpg",
+        "pitch": 5,
+        "yaw": -61,  
+        "hotSpots": [
+          { 
+            "pitch": 0, 
+            "yaw": 0, 
+            "type": "scene", 
+            "sceneId": "s3",  
+            "text": "Ke Spot 3" 
+          },
+          {
+            "pitch":21,
+            "yaw":-22.50,
+            "type":"info",
+            "text":"Penampakan"
+          },
+          {
+            "pitch":17.67,
+            "yaw":47.24,
+            "type":"info",
+            "text":"Penampakan2"
+          }
+
+        ] 
+      },
       "s3":  { "title": "Spot 3",  "type": "equirectangular", "panorama": "panos/image3.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s4",  "text": "Ke Spot 4" }] },
       "s4":  { "title": "Spot 4",  "type": "equirectangular", "panorama": "panos/image4.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s5",  "text": "Ke Spot 5" }] },
       "s5":  { "title": "Spot 5",  "type": "equirectangular", "panorama": "panos/image5.jpg",  "hotSpots": [{ "pitch": 0, "yaw": 0, "type": "scene", "sceneId": "s6",  "text": "Ke Spot 6" }] },
