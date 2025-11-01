@@ -106,6 +106,14 @@ header .muted {
   font-size: 0.95rem;
 }
 
+.left-aligned-math {
+  text-align: left;
+}
+/* Optional: Ensure the MathJax wrapper itself respects the container */
+.left-aligned-math .MathJax_Display {
+  text-align: left !important;
+}
+
 .content code {
   background-color: var(--article-code-bg);
   padding: 4px 6px;
